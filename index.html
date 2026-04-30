@@ -509,6 +509,87 @@
     <meta name="msapplication-TileImage" content="images/wp-content/uploads/2025/05/cropped-Logo-light-32x32.png" />
     <link rel='stylesheet' id='elementor-post-8343-css' href='css/wp-content/uploads/elementor/css/post-8343.css?ver=1773270576' type='text/css' media='all' />
     <link rel='stylesheet' id='elementor-post-1756-css' href='css/wp-content/uploads/elementor/css/post-1756.css?ver=1773270500' type='text/css' media='all' />
+    <style>
+        .elementor-8329 .elementor-element.elementor-element-6d9e127 {
+            position: relative;
+            overflow: hidden;
+            background-color: #102f37;
+        }
+
+        .elementor-8329 .elementor-element.elementor-element-6d9e127 > .elementor-background-video-container {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .elementor-8329 .elementor-element.elementor-element-6d9e127 > .elementor-background-video-container video,
+        .elementor-8329 .elementor-element.elementor-element-6d9e127 > .elementor-background-video-container .elementor-background-video-hosted {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .elementor-8329 .elementor-element.elementor-element-6d9e127 > .e-con,
+        .elementor-8329 .elementor-element.elementor-element-6d9e127 > .elementor-element:not(.floka-bird-particle-wrap) {
+            position: relative;
+            z-index: 2;
+        }
+
+        .floka-bird-particle-wrap {
+            position: absolute;
+            top: 50%;
+            right: clamp(28px, 6vw, 132px);
+            width: min(47vw, 760px);
+            height: min(72vh, 800px);
+            min-width: 420px;
+            min-height: 520px;
+            transform: translateY(-48%);
+            z-index: 1;
+            pointer-events: none;
+            overflow: hidden;
+            opacity: 0.94;
+            mix-blend-mode: screen;
+            filter: drop-shadow(0 18px 44px rgba(255, 221, 99, 0.2));
+        }
+
+        .floka-bird-particle-wrap .slides,
+        .floka-bird-particle-wrap p {
+            display: none;
+        }
+
+        .floka-bird-particle-wrap canvas.draw {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        @media (max-width: 991px) {
+            .floka-bird-particle-wrap {
+                right: 0;
+                width: 390px;
+                height: 520px;
+                min-width: 0;
+                min-height: 0;
+                opacity: 0.72;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .floka-bird-particle-wrap {
+                top: 54%;
+                right: -70px;
+                width: 280px;
+                height: 380px;
+                opacity: 0.48;
+            }
+        }
+    </style>
 </head>
 
 <body class="wp-singular page-template-default page page-id-8329 wp-theme-floka theme-floka woocommerce-no-js   pxl-redux-page  bd-px-header--default  site-color-gradient   woocommerce-layout-grid elementor-default elementor-kit-7 elementor-page elementor-page-8329">
@@ -1291,8 +1372,14 @@
                                     <div class="elementor-element elementor-element-cd47fae e-con-full e-flex pxl-section-overflow-visible pxl-column-none pxl-section-fix-none pxl-bg-color-none elementor-invisible e-con e-parent " data-id="cd47fae" data-element_type="container"
                                         id="home" data-settings="{&quot;background_background&quot;:&quot;video&quot;,&quot;animation&quot;:&quot;fadeIn&quot;,&quot;animation_delay&quot;:300}">
                                         <div class="elementor-element elementor-element-6d9e127 e-con-full e-flex pxl-section-overflow-visible pxl-column-none pxl-section-fix-none pxl-bg-color-none e-con e-child " data-id="6d9e127" data-element_type="container"
-                                            data-settings="{&quot;background_background&quot;:&quot;video&quot;,&quot;background_video_link&quot;:&quot;images\/wp-content\/uploads\/2025\/06\/home-1-video.mp4&quot;,&quot;background_play_on_mobile&quot;:&quot;yes&quot;,&quot;background_privacy_mode&quot;:&quot;yes&quot;}">
-                                            <div class="elementor-background-video-container" aria-hidden="true"><video class="elementor-background-video-hosted" autoplay muted playsinline loop></video></div>
+                                            data-settings="{&quot;background_background&quot;:&quot;video&quot;,&quot;background_video_link&quot;:&quot;assets\/home-1-video.mp4&quot;,&quot;background_play_on_mobile&quot;:&quot;yes&quot;,&quot;background_privacy_mode&quot;:&quot;yes&quot;}">
+                                            <div class="elementor-background-video-container" aria-hidden="true"><video class="elementor-background-video-hosted" autoplay muted playsinline loop><source src="assets/home-1-video.mp4" type="video/mp4"></video></div>
+                                            <div class="floka-bird-particle-wrap" data-density="1" data-particle-color="#ffdd63" data-animation="yes" aria-hidden="true">
+                                                <div class="slides">
+                                                    <div class="slide" data-src="data:image/png;base64,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"></div>
+                                                </div>
+                                                <canvas class="draw"></canvas>
+                                            </div>
                                             <div class="elementor-element elementor-element-f52e39b e-con-full e-flex pxl-section-overflow-visible pxl-column-none pxl-section-fix-none pxl-bg-color-none e-con e-child "
                                                 data-id="f52e39b" data-element_type="container">
                                                 <div class="elementor-element elementor-element-0f6e0a9 elementor-invisible elementor-widget elementor-widget-pxl_heading" data-id="0f6e0a9" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:600}"
@@ -3669,6 +3756,234 @@ United States </span></h2>
 const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjecturl(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
 //# sourceURL=js/wp-includes/js/wp-emoji-loader.min.js
 /* ]]>*/ </script>
+        <script>
+            (function() {
+                function initHeroVideo() {
+                    var video = document.querySelector('.elementor-element-6d9e127 .elementor-background-video-hosted');
+                    if (!video) return;
+                    video.muted = true;
+                    video.defaultMuted = true;
+                    video.loop = true;
+                    video.playsInline = true;
+                    video.autoplay = true;
+                    video.preload = 'auto';
+                    video.load();
+                    var playAttempt = video.play();
+                    if (playAttempt && typeof playAttempt.catch === 'function') {
+                        playAttempt.catch(function() {});
+                    }
+                }
+
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', initHeroVideo);
+                } else {
+                    initHeroVideo();
+                }
+            })();
+        </script>
+        <script>
+            (function() {
+                function parseColor(color) {
+                    var value = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(color || '#ffdd63');
+                    return value ? [parseInt(value[1], 16), parseInt(value[2], 16), parseInt(value[3], 16), 255] : [255, 221, 99, 255];
+                }
+
+                function shuffle(items) {
+                    for (var i = items.length - 1; i > 0; i--) {
+                        var j = Math.floor(Math.random() * (i + 1));
+                        var tmp = items[i];
+                        items[i] = items[j];
+                        items[j] = tmp;
+                    }
+                    return items;
+                }
+
+                function FlokaBirdParticles(container) {
+                    this.container = container;
+                    this.hero = container.closest('.elementor-element-6d9e127') || container.parentElement;
+                    this.canvas = container.querySelector('canvas.draw');
+                    this.ctx = this.canvas.getContext('2d');
+                    this.source = container.querySelector('.slide').getAttribute('data-src');
+                    this.color = parseColor(container.getAttribute('data-particle-color'));
+                    this.restless = container.getAttribute('data-animation') === 'yes';
+                    this.particles = [];
+                    this.points = [];
+                    this.mx = -9999;
+                    this.my = -9999;
+                    this.width = 1;
+                    this.height = 1;
+                    this.frame = 0;
+                    this.image = new Image();
+                    this.bind();
+                    this.load();
+                }
+
+                FlokaBirdParticles.prototype.bind = function() {
+                    var self = this;
+                    if (!this.hero) return;
+                    this.hero.addEventListener('mousemove', function(event) {
+                        var rect = self.container.getBoundingClientRect();
+                        self.mx = event.clientX - rect.left;
+                        self.my = event.clientY - rect.top;
+                    });
+                    this.hero.addEventListener('mouseleave', function() {
+                        self.mx = -9999;
+                        self.my = -9999;
+                    });
+                    window.addEventListener('resize', function() {
+                        self.resize(true);
+                    });
+                };
+
+                FlokaBirdParticles.prototype.load = function() {
+                    var self = this;
+                    this.image.onload = function() {
+                        self.resize(true);
+                        requestAnimationFrame(function(time) {
+                            self.tick(time || 0);
+                        });
+                    };
+                    this.image.src = this.source;
+                };
+
+                FlokaBirdParticles.prototype.resize = function(rebuild) {
+                    var rect = this.container.getBoundingClientRect();
+                    this.width = Math.max(1, Math.round(rect.width));
+                    this.height = Math.max(1, Math.round(rect.height));
+                    this.canvas.width = this.width;
+                    this.canvas.height = this.height;
+                    if (rebuild && this.image.complete) {
+                        this.buildPoints();
+                    }
+                };
+
+                FlokaBirdParticles.prototype.buildPoints = function() {
+                    var src = document.createElement('canvas');
+                    var srcCtx = src.getContext('2d', { willReadFrequently: true });
+                    var isSmall = window.innerWidth < 1000;
+                    var stride = isSmall ? 4 : 2;
+                    var maxParticles = window.innerWidth < 576 ? 1800 : (isSmall ? 3200 : 6200);
+                    var scale = Math.min(this.width * 0.9 / this.image.width, this.height * 0.88 / this.image.height);
+                    var drawW = Math.round(this.image.width * scale);
+                    var drawH = Math.round(this.image.height * scale);
+                    var offsetX = Math.round((this.width - drawW) * 0.5);
+                    var offsetY = Math.round((this.height - drawH) * 0.5);
+                    var raw = [];
+
+                    src.width = this.image.width;
+                    src.height = this.image.height;
+                    srcCtx.clearRect(0, 0, src.width, src.height);
+                    srcCtx.drawImage(this.image, 0, 0);
+
+                    var data = srcCtx.getImageData(0, 0, src.width, src.height).data;
+                    for (var y = 0; y < src.height; y += stride) {
+                        for (var x = 0; x < src.width; x += stride) {
+                            var index = (y * src.width + x) * 4;
+                            if (data[index + 3] > 10) {
+                                raw.push({
+                                    x: offsetX + x * scale,
+                                    y: offsetY + y * scale
+                                });
+                            }
+                        }
+                    }
+
+                    this.points = shuffle(raw).slice(0, maxParticles);
+                    this.particles = this.points.map(function(point) {
+                        return {
+                            x: Math.random() * this.width,
+                            y: Math.random() * this.height,
+                            gx: point.x,
+                            gy: point.y,
+                            vx: Math.random() * 8 - 4,
+                            vy: Math.random() * 8 - 4
+                        };
+                    }, this);
+                };
+
+                FlokaBirdParticles.prototype.tick = function(time) {
+                    this.move(time || 0);
+                    this.draw();
+                    var self = this;
+                    setTimeout(function() {
+                        requestAnimationFrame(function(nextTime) {
+                            self.tick(nextTime || 0);
+                        });
+                    }, 15);
+                };
+
+                FlokaBirdParticles.prototype.move = function(time) {
+                    var mouseForce = window.innerWidth < 768 ? 1800 : 4200;
+                    for (var i = 0; i < this.particles.length; i++) {
+                        var particle = this.particles[i];
+                        var driftX = this.restless ? Math.sin(time * 0.0008 + i * 0.19) * 0.65 : 0;
+                        var driftY = this.restless ? Math.cos(time * 0.0007 + i * 0.13) * 0.65 : 0;
+                        var dx = particle.gx + driftX - particle.x;
+                        var dy = particle.gy + driftY - particle.y;
+                        var distance = Math.sqrt(dx * dx + dy * dy) || 1;
+                        var pull = distance * 0.012;
+                        var angle = Math.atan2(dy, dx);
+                        var push = 0;
+                        var pushAngle = 0;
+
+                        if (this.mx > -1000) {
+                            var mx = particle.x - this.mx;
+                            var my = particle.y - this.my;
+                            var mouseDistance = mx * mx + my * my;
+                            push = Math.min(mouseForce / Math.max(mouseDistance, 1), 7);
+                            pushAngle = Math.atan2(my, mx);
+                        }
+
+                        particle.vx += pull * Math.cos(angle) + push * Math.cos(pushAngle);
+                        particle.vy += pull * Math.sin(angle) + push * Math.sin(pushAngle);
+                        particle.vx *= 0.9;
+                        particle.vy *= 0.9;
+                        particle.x += particle.vx;
+                        particle.y += particle.vy;
+                    }
+                };
+
+                FlokaBirdParticles.prototype.draw = function() {
+                    var image = this.ctx.createImageData(this.width, this.height);
+                    var data = image.data;
+                    var size = window.innerWidth < 768 ? 2 : 1;
+
+                    for (var i = 0; i < this.particles.length; i++) {
+                        var particle = this.particles[i];
+                        var x = particle.x | 0;
+                        var y = particle.y | 0;
+                        for (var sx = 0; sx < size; sx++) {
+                            for (var sy = 0; sy < size; sy++) {
+                                var px = x + sx;
+                                var py = y + sy;
+                                if (px >= 0 && px < this.width && py >= 0 && py < this.height) {
+                                    var index = (py * this.width + px) * 4;
+                                    data[index] = this.color[0];
+                                    data[index + 1] = this.color[1];
+                                    data[index + 2] = this.color[2];
+                                    data[index + 3] = this.color[3];
+                                }
+                            }
+                        }
+                    }
+
+                    this.ctx.putImageData(image, 0, 0);
+                };
+
+                function init() {
+                    var containers = document.querySelectorAll('.floka-bird-particle-wrap');
+                    for (var i = 0; i < containers.length; i++) {
+                        new FlokaBirdParticles(containers[i]);
+                    }
+                }
+
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', init);
+                } else {
+                    init();
+                }
+            })();
+        </script>
 </body>
 
 </html>

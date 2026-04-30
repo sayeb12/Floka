@@ -1,15 +1,28 @@
-const header = document.getElementById("siteHeader");
-const navMenu = document.getElementById("navMenu");
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = [...document.querySelectorAll(".nav-menu a")];
-const revealItems = document.querySelectorAll(".reveal");
-const cursorGlow = document.querySelector(".cursor-glow");
-const counters = document.querySelectorAll(".counter");
-const bars = document.querySelectorAll(".bar span");
+const topbar = document.getElementById("topbar");
+const menu = document.getElementById("menu");
+const nav = document.getElementById("nav");
+const revealEls = document.querySelectorAll(".reveal");
+const counters = document.querySelectorAll("[data-counter]");
+const accordions = document.querySelectorAll(".acc-item");
+const faqs = document.querySelectorAll(".faq-item");
 
-revealItems.forEach((item) => {
-  const delay = item.dataset.delay;
-  if (delay) item.style.setProperty("--delay", `${delay}ms`);
+function setHeaderState() {
+  topbar.classList.toggle("scrolled", window.scrollY > 10);
+}
+
+window.addEventListener("scroll", setHeaderState);
+setHeaderState();
+
+menu.addEventListener("click", () => {
+  const open = nav.classList.toggle("open");
+  menu.setAttribute("aria-expanded", String(open));
+});
+
+nav.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("open");
+    menu.setAttribute("aria-expanded", "false");
+  });
 });
 
 const revealObserver = new IntersectionObserver(
@@ -17,40 +30,31 @@ const revealObserver = new IntersectionObserver(
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
       entry.target.classList.add("visible");
-
-      entry.target.querySelectorAll(".bar span").forEach((bar) => {
-        bar.style.width = `${bar.dataset.width}%`;
-      });
-
-      entry.target.querySelectorAll(".counter").forEach(animateCounter);
       revealObserver.unobserve(entry.target);
     });
   },
-  { threshold: 0.18 }
+  { threshold: 0.16 }
 );
 
-revealItems.forEach((item) => revealObserver.observe(item));
+revealEls.forEach((el) => revealObserver.observe(el));
 
-const directBarObserver = new IntersectionObserver(
+const counterObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
-      entry.target.style.width = `${entry.target.dataset.width}%`;
-      directBarObserver.unobserve(entry.target);
+      animateCounter(entry.target);
+      counterObserver.unobserve(entry.target);
     });
   },
-  { threshold: 1 }
+  { threshold: 0.7 }
 );
 
-bars.forEach((bar) => directBarObserver.observe(bar));
+counters.forEach((counter) => counterObserver.observe(counter));
 
 function animateCounter(counter) {
-  if (counter.dataset.done) return;
-  counter.dataset.done = "true";
-
-  const target = Number(counter.dataset.count);
-  const duration = 1400;
+  const target = Number(counter.dataset.counter);
   const start = performance.now();
+  const duration = 1300;
 
   function tick(now) {
     const progress = Math.min((now - start) / duration, 1);
@@ -62,70 +66,36 @@ function animateCounter(counter) {
   requestAnimationFrame(tick);
 }
 
-function updateHeader() {
-  header.classList.toggle("scrolled", window.scrollY > 20);
-}
+accordions.forEach((item) => {
+  item.querySelector("button").addEventListener("click", () => {
+    accordions.forEach((other) => {
+      if (other !== item) {
+        other.classList.remove("active");
+        other.querySelector("button span").textContent = "+";
+      }
+    });
 
-function updateActiveLink() {
-  const offset = window.scrollY + 160;
-
-  navLinks.forEach((link) => {
-    const section = document.querySelector(link.getAttribute("href"));
-    if (!section) return;
-
-    const isActive = offset >= section.offsetTop && offset < section.offsetTop + section.offsetHeight;
-    link.classList.toggle("active", isActive);
-  });
-}
-
-window.addEventListener("scroll", () => {
-  updateHeader();
-  updateActiveLink();
-});
-
-menuToggle.addEventListener("click", () => {
-  const isOpen = navMenu.classList.toggle("open");
-  menuToggle.classList.toggle("open", isOpen);
-  menuToggle.setAttribute("aria-expanded", String(isOpen));
-});
-
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    navMenu.classList.remove("open");
-    menuToggle.classList.remove("open");
-    menuToggle.setAttribute("aria-expanded", "false");
+    const isActive = item.classList.toggle("active");
+    item.querySelector("button span").textContent = isActive ? "-" : "+";
   });
 });
 
-document.querySelectorAll(".magnetic").forEach((button) => {
-  button.addEventListener("mousemove", (event) => {
-    const rect = button.getBoundingClientRect();
-    const x = event.clientX - rect.left - rect.width / 2;
-    const y = event.clientY - rect.top - rect.height / 2;
-    button.style.transform = `translate(${x * 0.12}px, ${y * 0.18}px)`;
-  });
-
-  button.addEventListener("mouseleave", () => {
-    button.style.transform = "";
+faqs.forEach((item) => {
+  item.querySelector("button").addEventListener("click", () => {
+    faqs.forEach((other) => {
+      if (other !== item) other.classList.remove("active");
+    });
+    item.classList.toggle("active");
   });
 });
 
-document.addEventListener("mousemove", (event) => {
-  if (!cursorGlow) return;
-  cursorGlow.style.left = `${event.clientX}px`;
-  cursorGlow.style.top = `${event.clientY}px`;
-});
-
-document.querySelector(".contact-form").addEventListener("submit", (event) => {
+document.querySelector(".project-form").addEventListener("submit", (event) => {
   event.preventDefault();
   const button = event.currentTarget.querySelector("button");
   const original = button.innerHTML;
-  button.innerHTML = '<span>Message queued</span><i class="fa-solid fa-check"></i>';
+  button.innerHTML = "<span>+</span> Message sent";
   setTimeout(() => {
     button.innerHTML = original;
     event.currentTarget.reset();
-  }, 1800);
+  }, 1700);
 });
-
-updateHeader();
-updateActiveLink();

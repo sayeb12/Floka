@@ -3,286 +3,281 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Novara Studio - Digital Agency</title>
+  <title>Fleka Studio - Creative Digital Agency</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="cursor-glow" aria-hidden="true"></div>
-
-  <header class="site-header" id="siteHeader">
-    <a class="brand" href="#home" aria-label="Novara Studio home">
-      <span class="brand-mark">N</span>
-      <span>Novara</span>
+  <header class="topbar" id="topbar">
+    <a class="brand" href="#home" aria-label="Fleka Studio">
+      <span class="brand-glyph"></span>
+      <span>Fleka</span>
     </a>
-
-    <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
+    <nav class="nav" id="nav">
       <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#portfolio">Works</a>
-      <a href="#team">Team</a>
-      <a href="#contact">Contact</a>
+      <a href="#pages">Pages</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#blog">Blog</a>
     </nav>
-
-    <a class="nav-cta" href="#contact">Start a project</a>
-
-    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
-      <span></span>
-      <span></span>
+    <a class="mail" href="mailto:hello@fleka.studio">hello@fleka.studio</a>
+    <button class="menu" id="menu" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span><span></span>
     </button>
   </header>
 
-  <main>
-    <section class="hero section-pad" id="home">
-      <div class="orb orb-one"></div>
-      <div class="orb orb-two"></div>
-      <div class="hero-grid">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">Digital studio for ambitious brands</p>
-          <h1>We shape ideas into expressive digital products.</h1>
-          <p class="hero-text">A strategy-led creative agency building identity systems, websites, motion, and growth campaigns with craft, speed, and clarity.</p>
-          <div class="hero-actions">
-            <a class="primary-btn magnetic" href="#portfolio">
-              <span>Explore work</span>
-              <i class="fa-solid fa-arrow-right"></i>
-            </a>
-            <a class="text-link" href="#services">Our expertise</a>
-          </div>
-        </div>
-
-        <div class="hero-art reveal" data-delay="120">
-          <div class="art-card main-art">
-            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80" alt="Creative team planning a digital project">
-          </div>
-          <div class="floating-note note-top">
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
-            <span>Brand systems</span>
-          </div>
-          <div class="floating-note note-bottom">
-            <strong>4.9</strong>
-            <span>Client rating</span>
-          </div>
-          <div class="shape shape-a"></div>
-          <div class="shape shape-b"></div>
-        </div>
+  <main id="home">
+    <section class="hero reveal">
+      <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1800&q=85" alt="Astronaut helmet in a cinematic blue atmosphere">
+      <div class="hero-title">
+        <h1>Fleka</h1>
+        <p>Studio</p>
       </div>
-    </section>
-
-    <section class="about section-pad" id="about">
-      <div class="section-head reveal">
-        <p class="eyebrow">Studio approach</p>
-        <h2>Purposeful design, practical systems, and launches that feel effortless.</h2>
-      </div>
-      <div class="about-layout">
-        <div class="about-panel reveal">
-          <p>Novara partners with founders and teams to transform loose ideas into polished brand experiences. We combine research, visual design, engineering, and campaign thinking so every touchpoint works together.</p>
-          <a class="circle-link" href="#contact" aria-label="Contact Novara Studio">
-            <span>Let's talk</span>
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          </a>
-        </div>
-        <div class="stats-grid reveal" data-delay="100">
-          <div class="stat">
-            <span class="counter" data-count="128">0</span>
-            <p>Projects shipped</p>
-          </div>
-          <div class="stat">
-            <span class="counter" data-count="36">0</span>
-            <p>Brand launches</p>
-          </div>
-          <div class="stat">
-            <span class="counter" data-count="12">0</span>
-            <p>Global markets</p>
-          </div>
-          <div class="stat">
-            <span class="counter" data-count="98">0</span>
-            <p>Retention score</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="services section-pad" id="services">
-      <div class="section-head split reveal">
+      <div class="hero-card glass">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=220&q=80" alt="Portrait of creative director Arman Hale">
         <div>
-          <p class="eyebrow">Company expertise</p>
-          <h2>From sharp positioning to memorable digital experiences.</h2>
-        </div>
-        <p>Choose a focused team that can clarify your message, design the interface, build the product, and support growth after launch.</p>
-      </div>
-      <div class="service-grid">
-        <article class="service-card reveal">
-          <span>01</span>
-          <i class="fa-solid fa-pen-nib"></i>
-          <h3>Brand Identity</h3>
-          <p>Naming, visual systems, launch campaigns, and guidelines that keep teams aligned.</p>
-        </article>
-        <article class="service-card reveal" data-delay="80">
-          <span>02</span>
-          <i class="fa-solid fa-layer-group"></i>
-          <h3>UI/UX Design</h3>
-          <p>Conversion-ready journeys, product interfaces, prototypes, and design systems.</p>
-        </article>
-        <article class="service-card reveal" data-delay="160">
-          <span>03</span>
-          <i class="fa-solid fa-code"></i>
-          <h3>Web Development</h3>
-          <p>Fast, responsive, accessible websites with expressive animations and clean code.</p>
-        </article>
-        <article class="service-card reveal" data-delay="240">
-          <span>04</span>
-          <i class="fa-solid fa-bullseye"></i>
-          <h3>Growth Strategy</h3>
-          <p>Content, analytics, SEO, and campaign systems that turn attention into action.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="skills section-pad" id="skills">
-      <div class="skills-card reveal">
-        <div>
-          <p class="eyebrow">Creative range</p>
-          <h2>Design intelligence with delivery discipline.</h2>
-        </div>
-        <div class="skill-bars">
-          <div class="skill">
-            <div class="skill-top"><span>Strategy</span><span>96%</span></div>
-            <div class="bar"><span data-width="96"></span></div>
-          </div>
-          <div class="skill">
-            <div class="skill-top"><span>Interface Design</span><span>92%</span></div>
-            <div class="bar"><span data-width="92"></span></div>
-          </div>
-          <div class="skill">
-            <div class="skill-top"><span>Development</span><span>88%</span></div>
-            <div class="bar"><span data-width="88"></span></div>
-          </div>
-          <div class="skill">
-            <div class="skill-top"><span>Motion Systems</span><span>82%</span></div>
-            <div class="bar"><span data-width="82"></span></div>
-          </div>
+          <small>Head of idea</small>
+          <strong>Arman D. Hale</strong>
         </div>
       </div>
+      <div class="hero-copy">
+        <span>No cookie-cutter websites.</span>
+        <p>No fluff. Just neat ideas and sharp strategies to grow your business and elevate your brand.</p>
+      </div>
+      <button class="hero-dot" aria-label="Hero decoration"></button>
     </section>
 
-    <section class="portfolio section-pad" id="portfolio">
-      <div class="section-head reveal">
-        <p class="eyebrow">Selected portfolio</p>
-        <h2>Strategy to build powerful digital solutions.</h2>
+    <section class="intro wrap" id="pages">
+      <div class="mini-note reveal">
+        <span class="brand-glyph"></span>
+        <p>We design every project with long-term success in mind.</p>
       </div>
-      <div class="portfolio-grid">
-        <article class="project-card reveal">
-          <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=900&q=80" alt="Modern website dashboard concept">
-          <div class="project-info">
-            <p>Branding / Website</p>
-            <h3>Auralis Platform</h3>
-            <span>2026</span>
+      <h2 class="intro-title reveal">Our approach is straightforward-prioritizing functionality, speed, and clarity for solutions.</h2>
+      <div class="intro-grid">
+        <article class="stat-card reveal">
+          <strong><span data-counter="25">0</span>+</strong>
+          <p>Years of experience</p>
+          <span>Explore how we transform ideas into extraordinary digital experiences.</span>
+          <div class="avatars">
+            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=80&q=80" alt="">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&q=80" alt="">
+            <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=80&q=80" alt="">
+            <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=80&q=80" alt="">
           </div>
+          <small>1200+ happy users review</small>
         </article>
-        <article class="project-card reveal" data-delay="90">
-          <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=900&q=80" alt="Team reviewing brand material">
-          <div class="project-info">
-            <p>Product / UX</p>
-            <h3>Northline Studio</h3>
-            <span>2026</span>
-          </div>
-        </article>
-        <article class="project-card reveal" data-delay="180">
-          <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=900&q=80" alt="Digital planning board">
-          <div class="project-info">
-            <p>Campaign / Motion</p>
-            <h3>Vela Commerce</h3>
-            <span>2025</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="testimonials section-pad">
-      <div class="marquee" aria-hidden="true">
-        <span>Great in UI/UX</span>
-        <span>Fast launch team</span>
-        <span>Clear creative direction</span>
-        <span>Premium web design</span>
-      </div>
-      <div class="testimonial-card reveal">
-        <i class="fa-solid fa-quote-left"></i>
-        <h2>They brought rare clarity to a messy product story and turned it into a brand experience our customers immediately understood.</h2>
-        <div class="client">
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=160&q=80" alt="Portrait of Maya Chen">
+        <article class="quote-card reveal">
+          <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=900&q=82" alt="Designer portrait in studio light">
           <div>
-            <strong>Maya Chen</strong>
-            <span>Founder, LoomGrid</span>
+            <h3>"At Fleka, we merge strategy, creativity, and technology to shape brands that people love."</h3>
+            <p>Marina Wells / CEO</p>
+          </div>
+        </article>
+        <div class="side-stack reveal">
+          <article>
+            <small>What's new</small>
+            <strong>For check updates</strong>
+            <div class="tag-row"><span>Experience</span><span>Branding</span><span>LinkedIn</span><span>Vimeo</span></div>
+          </article>
+          <article>
+            <small>Improvement</small>
+            <div class="mini-bar"><span>Solutions</span><b style="width: 100%"></b></div>
+            <div class="mini-bar"><span>Growth</span><b style="width: 80%"></b></div>
+            <div class="mini-bar"><span>Brands</span><b style="width: 72%"></b></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="ghost-line">see how our team combine</div>
+
+    <section class="portfolio wrap" id="portfolio">
+      <div class="section-kicker reveal">Portfolio</div>
+      <h2 class="center-title reveal">Strategy to build <span>powerful</span></h2>
+      <div class="work-grid">
+        <article class="work-card reveal">
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=84" alt="Luxury sports car detail">
+          <div><strong>Midnight Racing</strong><span>2026</span></div>
+        </article>
+        <article class="work-card reveal">
+          <img src="https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?auto=format&fit=crop&w=1000&q=84" alt="Person wearing virtual reality headset">
+          <div><strong>Immersive Product UX</strong><span>2025</span></div>
+        </article>
+        <article class="work-card wide reveal">
+          <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1400&q=84" alt="Hands cutting green fabric">
+          <div><strong>Atelier Commerce</strong><span>2026</span></div>
+        </article>
+        <article class="work-card reveal">
+          <img src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=1000&q=84" alt="Runner on blue court">
+          <div><strong>Motion Identity</strong><span>2026</span></div>
+        </article>
+        <article class="work-card dark-work reveal">
+          <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1000&q=84" alt="Spotlight in a dark room">
+          <a href="#" aria-label="Open project"><i class="fa-solid fa-arrow-right"></i></a>
+          <div><strong>Launch Film</strong><span>2025</span></div>
+        </article>
+      </div>
+      <a class="more-link reveal" href="#contact"><span>+</span> More works</a>
+    </section>
+
+    <section class="expertise reveal">
+      <h2>Company <span>expertise</span></h2>
+      <div class="accordion">
+        <div class="acc-item">
+          <button><span>+</span>User Interface & Experience Design</button>
+          <div class="acc-panel">
+            <p>We create clear, expressive product journeys for websites, apps, and conversion-focused landing pages.</p>
+            <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=520&q=80" alt="Spotlight artwork">
           </div>
         </div>
+        <div class="acc-item active">
+          <button><span>-</span>Web Development</button>
+          <div class="acc-panel">
+            <p>From brand strategy to immersive digital experiences, we craft scalable sites that feel quick and polished.</p>
+            <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=520&q=80" alt="Spotlight artwork">
+          </div>
+        </div>
+        <div class="acc-item">
+          <button><span>+</span>Search Engine Optimization</button>
+          <div class="acc-panel"><p>Technical SEO, content structure, analytics, and launch support for long-term growth.</p></div>
+        </div>
+        <div class="acc-item">
+          <button><span>+</span>Low-Code Development</button>
+          <div class="acc-panel"><p>Fast prototypes and maintainable systems for teams who need to move quickly.</p></div>
+        </div>
       </div>
     </section>
 
-    <section class="team section-pad" id="team">
-      <div class="section-head split reveal">
-        <div>
-          <p class="eyebrow">Our makers</p>
-          <h2>Meet the team behind the momentum.</h2>
+    <section class="facts wrap">
+      <img class="facts-img reveal" src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=900&q=82" alt="Creative team on stairs">
+      <div class="facts-copy reveal">
+        <small>Fun facts</small>
+        <h2>Consistently delivering impactful results through a perfect blend of design and functionality.</h2>
+        <div class="facts-cards">
+          <article><p>Successful projects completed</p><strong><span data-counter="1">0</span>k+</strong></article>
+          <article><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><strong>4.9/5</strong><p>End-to-end creative solutions that make brands unforgettable.</p></article>
+          <article class="black"><img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=320&q=80" alt="Mobile design cards"><p>More than 2k projects completed.</p></article>
+          <article class="photo"><span>1+</span></article>
         </div>
-        <div class="social-strip">
-          <a href="#" aria-label="Dribbble"><i class="fa-brands fa-dribbble"></i></a>
-          <a href="#" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
-          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-        </div>
-      </div>
-      <div class="team-grid">
-        <article class="team-card reveal">
-          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80" alt="Portrait of Leo Grant">
-          <h3>Leo Grant</h3>
-          <p>Creative Director</p>
-        </article>
-        <article class="team-card reveal" data-delay="80">
-          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=500&q=80" alt="Portrait of Isla Reed">
-          <h3>Isla Reed</h3>
-          <p>Lead Designer</p>
-        </article>
-        <article class="team-card reveal" data-delay="160">
-          <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=500&q=80" alt="Portrait of Omar Vale">
-          <h3>Omar Vale</h3>
-          <p>Frontend Engineer</p>
-        </article>
       </div>
     </section>
 
-    <section class="contact section-pad" id="contact">
-      <div class="contact-grid reveal">
-        <div>
-          <p class="eyebrow">Get in touch</p>
-          <h2>Tell us about your project, product, or launch.</h2>
-          <p>hello@novarastudio.co</p>
-          <p>+1 415 204 8821</p>
+    <section class="clients wrap reveal">
+      <div class="client-row">
+        <strong>logoipsum</strong><strong>Logoipsum</strong><strong>Logoipsum</strong>
+        <a href="#">Next can be you <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="video-card">
+        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1500&q=82" alt="Business team in modern office">
+        <button><i class="fa-solid fa-play"></i> Play reel</button>
+      </div>
+    </section>
+
+    <section class="feedback wrap">
+      <div class="section-kicker reveal">Last feedbacks</div>
+      <h2 class="feedback-title reveal">Accelerating growth, and unlocking new potential. Let's build your brand-together.</h2>
+      <div class="review-grid">
+        <article class="review reveal"><strong>Nicolas R. Elginton</strong><span>IT Specialist</span><p>&#9733;&#9733;&#9733;&#9733;&#9733;</p><q>As we continued to use their tool and found more use cases, our feature requests quickly found their way into their backlog.</q></article>
+        <article class="review tall reveal"><p>&#9733;&#9733;&#9733;&#9733;&#9733;</p><q>As we continued to use their tool and found more use cases, our feature requests quickly found their way into their backlog.</q><strong>Julian T. Beaumont</strong></article>
+        <article class="review black reveal"><strong>Felipe D. Hawthorne</strong><span>IT Specialist</span><p>&#9733;&#9733;&#9733;&#9733;&#9733;</p><q>Great design solutions and a calm, focused process from start to finish.</q></article>
+      </div>
+    </section>
+
+    <section class="contact-band reveal" id="contact">
+      <div>
+        <small>Get in touch</small>
+        <h2>Tell us about your project-whether it's a website, SEO, or marketing.</h2>
+        <div class="contact-meta">
+          <p><i class="fa-regular fa-clock"></i> Work and partner inquiries<br>+1 234 567 8900</p>
+          <p><i class="fa-solid fa-location-dot"></i> 57 Maple Ave, Suite 430<br>United States</p>
         </div>
-        <form class="contact-form">
-          <input type="text" placeholder="Your name" aria-label="Your name" required>
-          <input type="email" placeholder="Email address" aria-label="Email address" required>
-          <select aria-label="Project budget">
-            <option>Budget: $2k - $5k</option>
-            <option>$5k - $10k</option>
-            <option>$10k+</option>
-          </select>
-          <textarea placeholder="What are you building?" aria-label="Project description"></textarea>
-          <button class="primary-btn" type="submit">
-            <span>Send message</span>
-            <i class="fa-solid fa-paper-plane"></i>
-          </button>
-        </form>
+      </div>
+      <form class="project-form">
+        <h3>Have a project in mind?</h3>
+        <input placeholder="Your name" aria-label="Your name">
+        <input placeholder="Business email" aria-label="Business email">
+        <select aria-label="Budget"><option>Budget</option><option>$3k-$8k</option><option>$8k+</option></select>
+        <select aria-label="Service"><option>Website</option><option>Branding</option><option>Marketing</option></select>
+        <textarea placeholder="Message" aria-label="Message"></textarea>
+        <button type="submit"><span>+</span> Let's talk</button>
+      </form>
+    </section>
+
+    <section class="awards wrap">
+      <div class="award-photo reveal"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=600&q=82" alt="Award winning team"></div>
+      <div class="award-list reveal">
+        <div><span>Best digital brand</span><strong>FWA Awards</strong><em>2026</em></div>
+        <div><span>Peak UI designer</span><strong>Google</strong><em>2024</em></div>
+        <div><span>Open Flux</span><strong>Apple</strong><em>2025</em></div>
+        <div><span>National UX designer</span><strong>Skilling</strong><em>2024</em></div>
+      </div>
+    </section>
+
+    <section class="team wrap" id="team">
+      <div class="team-intro reveal">
+        <small>Our agencies</small>
+        <h2>Meet with our team member</h2>
+        <p>What began over coffee-fueled brainstorming sessions has grown into a thriving digital agency dedicated to helping brands stand out.</p>
+        <a href="#"><span>+</span> Join with us</a>
+        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=700&q=82" alt="Team standing in office">
+      </div>
+      <div class="team-list">
+        <article class="member reveal"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80" alt="Nicolas Elginton"><strong>Nicolas E. Elginton</strong><span>Founder</span></article>
+        <article class="member reveal"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=500&q=80" alt="Carlota Ashcroft"><strong>Carlota Ashcroft</strong><span>Designer</span></article>
+        <article class="member reveal"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" alt="Laurentia Ashton"><strong>Laurentia Ashton</strong><span>UX Researcher</span></article>
+        <article class="member reveal"><img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=500&q=80" alt="Ricardo Mirkow"><strong>Ricardo Mirkow</strong><span>UI Designer</span></article>
+      </div>
+    </section>
+
+    <section class="faq wrap">
+      <aside class="faq-side reveal">
+        <p>Don't found anything yet. Feel free to ask anything.</p>
+        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=480&q=80" alt="Support person portrait">
+      </aside>
+      <div class="faq-main reveal">
+        <h2>Have more questions? We've answers.</h2>
+        <div class="faq-item active"><button>What is artificial intelligence (AI)? <span>+</span></button><p>Explore how we transform ideas into extraordinary digital experiences. Each project is a testament to our design thinking, strategic approach, and creative execution.</p></div>
+        <div class="faq-item"><button>How does AI improve business efficiency? <span>+</span></button><p>By automating repeatable work, clarifying patterns, and supporting smarter decisions.</p></div>
+        <div class="faq-item"><button>How long does AI implementation take? <span>+</span></button><p>Simple pilots can launch quickly; full systems depend on data, workflow, and integration needs.</p></div>
+        <div class="faq-item"><button>What are the costs of AI solutions? <span>+</span></button><p>Costs vary by scope. We start with focused discovery so the budget stays practical.</p></div>
+      </div>
+    </section>
+
+    <section class="blog wrap" id="blog">
+      <small class="reveal">Insights</small>
+      <h2 class="reveal">Company blog & updates</h2>
+      <div class="blog-grid">
+        <article class="post reveal"><div><span>Web / Nov 07, 2026</span><h3>Seamless user interfaces, crafted with intent.</h3></div><img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=700&q=82" alt="People collaborating"></article>
+        <article class="post mid reveal"><img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=700&q=82" alt="Meeting at table"><span>Web / Nov 07, 2026</span><h3>Creative web platforms, designed for growth.</h3></article>
+        <article class="post reveal"><div><span>Web / Nov 07, 2026</span><h3>Immersive virtual journeys, built with precision.</h3></div><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=700&q=82" alt="Man working at laptop"></article>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <span>&copy; 2026 Novara Studio</span>
-    <a href="#home">Back to top</a>
+  <footer class="footer reveal">
+    <h2>Let's<br>talk now</h2>
+    <div class="footer-grid">
+      <div class="footer-art">
+        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=700&q=82" alt="Studio team">
+        <span class="footer-logo"></span>
+      </div>
+      <nav>
+        <a href="#pages">About Us</a>
+        <a href="#blog">Journal</a>
+        <a href="#team">Faq</a>
+        <a href="#contact">Get In Touch</a>
+        <a href="#">Careers</a>
+      </nav>
+      <div>
+        <p>At Fleka, we believe future should be more than just functional. It should tell your story, with a focus on timeless design, sustainable materials, and expert craftsmanship.</p>
+        <strong>hello@fleka.studio</strong>
+        <strong>+123 456 789 001</strong>
+        <div class="socials"><a href="#">f</a><a href="#">x</a><a href="#">in</a><a href="#">Be</a></div>
+      </div>
+    </div>
+    <p class="copyright">Copyright &copy; 2026 Fleka Studio</p>
   </footer>
 
   <script src="script.js"></script>
